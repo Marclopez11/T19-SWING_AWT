@@ -7,6 +7,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
@@ -168,8 +169,28 @@ public class Ej4 extends JFrame {
 		contentPane.add(lblNewLabel_2);
 		
 		JLabel lblNewLabel_3 = new JLabel("MINICLCULADORA");
-		lblNewLabel_3.setBounds(30, 6, 228, 16);
+		lblNewLabel_3.setBounds(32, 6, 228, 16);
 		contentPane.add(lblNewLabel_3);
-	}
+		
+		JButton btnNewButton_5 = new JButton("About");
+		btnNewButton_5.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				JOptionPane.showMessageDialog(null, "Realizado por Marc Lopez"); 
 
+			}
+		});
+		btnNewButton_5.setBounds(6, 237, 117, 29);
+		contentPane.add(btnNewButton_5);
+		
+		JButton btnNewButton_6 = new JButton("Exit");
+		btnNewButton_6.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				System.exit(0);
+
+			}
+		});
+		btnNewButton_6.setBounds(161, 1, 117, 29);
+		contentPane.add(btnNewButton_6);
+	}
 }
